@@ -1,0 +1,22 @@
+{
+    "name": "Semgrep Development",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ocamllabs.ocaml-platform",
+                "ms-python.python",
+                "ms-python.pipenv",
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    },
+    "containerEnv": {
+        "OPAMROOT": "/home/vscode/.opam"
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "bash .devcontainer/postCreate.sh"
+}
