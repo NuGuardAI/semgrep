@@ -12,11 +12,23 @@
                 "ms-python.pipenv",
                 "dbaeumer.vscode-eslint"
             ]
+        },
+        "codespaces": {
+            "repositories": {
+                "NuGuardAI/semgrep": {
+                    "permissions": {
+                        "contents": "write",
+                        "pull_requests": "write",
+                        "metadata": "read"
+                    }
+                }
+            }
         }
     },
     "containerEnv": {
         "OPAMROOT": "/home/vscode/.opam"
     },
+    "runArgs": ["--env-file", ".devcontainer/.env"],
     "remoteUser": "vscode",
     "postCreateCommand": "bash .devcontainer/postCreate.sh"
 }
